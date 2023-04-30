@@ -1,0 +1,163 @@
+.sectionTask {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  gap: 1px 20px;
+  /* grid-template-columns: 10px; */
+}
+.containerTask {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  top: -50px;
+  left: 20px;
+}
+.containerTask .dropTask {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.05),
+    25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05),
+    inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  border-radius: 52% 48% 33% 67% / 38% 45% 55% 62%;
+}
+
+.containerTask .dropTask:nth-child(n) {
+  border-radius: 52% 48% 33% 67% / 38% 45% 55% 62%;
+}
+.containerTask .dropTask:nth-child(n):hover {
+  border-radius: 50%;
+}
+.completed .descrp{
+  text-decoration: underline;
+  color: #6A6262;
+}
+.containerTask .dropTask::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+}
+.containerTask .dropTask::after {
+  content: "";
+  position: absolute;
+  top: 70px;
+  left: 60px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+}
+.containerTask p {
+  color: black;
+  font-weight: 600;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 12px;
+  width: 80%;
+  /* text-align: center; */
+  /* border: 1px solid black; */
+}
+
+.btnsTask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 40px;
+  position: absolute;
+  bottom: 40px;
+  right: 25px;
+}
+.btnsTask button,
+.containerTask .checkbtn {
+  /* position: relative; */
+  width: 40px;
+  height: 40px;
+  background: transparent !important;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  cursor: pointer;
+  border: none;
+  /* opacity: 0.7; */
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.1),
+    inset -2px -5px 10px rgba(225, 225, 225, 1),
+    15px 15px 10px rgba(0, 0, 0, 0.05), 15px 10px 15px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+  border-radius: 52% 48% 33% 67% / 38% 45% 55% 62%;
+}
+.btnsTask button:hover {
+  border-radius: 50%;
+}
+.containerTask .checkbtn {
+  color: green;
+  /* top:20px; */
+}
+.containerTask .checkbtn:hover {
+  border-radius: 50%;
+  cursor: pointer;
+}
+.btnsTask .editbtn {
+  color: #01b4ff;
+}
+.btnsTask .deletebtn {
+  color: red;
+}
+.sytEdit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.sytEdit textarea{
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.1),
+    inset -2px -5px 10px rgba(255, 255, 255, 1),
+    15px 15px 10px rgba(0, 0, 0, 0.05), 15px 10px 15px rgba(0, 0, 0, 0.25);
+
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background: #01b4ff;
+  opacity: .5;
+  /* width: 100%; */
+  font-size: 1em;
+  padding: 10px 5px;
+  color: black;
+}
+.sytEdit button{
+  width: 40px;
+  height: 40px;
+  background: transparent !important;
+  color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  cursor: pointer;
+  border: none;
+  /* opacity: 0.7; */
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.1),
+    inset -2px -5px 10px rgba(225, 225, 225, 1),
+    15px 15px 10px rgba(0, 0, 0, 0.05), 15px 10px 15px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+  border-radius: 52% 48% 33% 67% / 38% 45% 55% 62%;
+}
