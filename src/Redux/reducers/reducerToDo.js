@@ -2,7 +2,7 @@ import {
   ADD_ToDo,
   COMPLETE_ToDo,
   EDIT_ToDo,
-
+  DELETE_ToDo,
 } from "../actionTypes/actionTypes";
 
 const initialState = {
@@ -50,7 +50,10 @@ const reducersToDo = (state = initialState, { type, payload }) => {
         ...state,
         tasks: editedtask,
       };
-   
+    case DELETE_ToDo:
+      const filterTasks = state.tasks.filter((task) => task.id !==  payload);
+      console.log(filterTasks)
+      return {tasks:filterTasks}
     default:
       return state;
   }

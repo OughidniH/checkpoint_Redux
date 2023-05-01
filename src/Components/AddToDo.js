@@ -6,12 +6,11 @@ const AddToDo = () => {
   const [task, setTask] = useState("");
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (task) {
       dispatch(addtodo(task));
       setTask("");
     } else {
-      alert("Please enter a task");
     }
   };
   return (
@@ -34,7 +33,6 @@ const AddToDo = () => {
           </form>
         </div>
       </div>
-      
     </div>
   );
 };

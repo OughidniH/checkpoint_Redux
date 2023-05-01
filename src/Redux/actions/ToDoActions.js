@@ -18,9 +18,9 @@ export const edittodo = (task) => {
     payload: task,
   };
 };
-export const deletetodo = (id) => {
+export const deletetodo = (payload) => {
   return {
     type: DELETE_ToDo,
-    payload: id,
+    payload
   };
 };

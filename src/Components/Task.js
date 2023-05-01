@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import {
   completetodo,
   edittodo,
-  // deletetodo,
+  deletetodo,
 } from "../Redux/actions/ToDoActions";
 import "./Task.css";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
@@ -28,7 +28,7 @@ const Task = ({ task }) => {
     setIsEditing(false);
   };
 
- 
+//  console.log(task)
   return (
     <>
       <div className="containerTask ">
@@ -36,7 +36,7 @@ const Task = ({ task }) => {
           {isEditing ? (
             <form className="sytEdit">
               <textarea
-                rows={5}
+                rows={3}
                 cols={25}
                 value={editValue}
                 onChange={(e) => {
@@ -69,7 +69,7 @@ const Task = ({ task }) => {
           >
             <EditCalendarIcon />
           </button>
-          <button  className="deletebtn">
+          <button onClick={() => dispatch(deletetodo(task.id))} className="deletebtn">
             <DeleteForeverIcon />
           </button>
         </div>
